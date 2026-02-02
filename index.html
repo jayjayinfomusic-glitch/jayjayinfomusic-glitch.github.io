@@ -1,0 +1,539 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="Official EPK for JayJay — UK artist. Music, visuals, press, contact." />
+  <title>JayJay — EPK</title>
+
+  <!-- Open Graph (social preview) -->
+  <meta property="og:title" content="JayJay — EPK" />
+  <meta property="og:description" content="Official EPK: music, visuals, bio, press, and contact." />
+  <meta property="og:type" content="website" />
+  <!-- Use one of your photos for the social preview -->
+  <meta property="og:image" content="assets/jayjay-press-afro.jpg" />
+
+  <style>
+    :root{
+      --bg: #0b0d12;
+      --text: rgba(255,255,255,.92);
+      --muted: rgba(255,255,255,.70);
+      --line: rgba(255,255,255,.12);
+      --accent: #8a5cff;
+      --accent2: #2de2e6;
+      --shadow: 0 18px 55px rgba(0,0,0,.55);
+      --radius2: 26px;
+      --max: 1060px;
+      --font: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, "Apple Color Emoji","Segoe UI Emoji";
+    }
+    *{box-sizing:border-box}
+    body{
+      margin:0;
+      font-family:var(--font);
+      color:var(--text);
+      background:
+        radial-gradient(900px 500px at 20% 10%, rgba(138,92,255,.25), transparent 55%),
+        radial-gradient(800px 450px at 80% 15%, rgba(45,226,230,.18), transparent 60%),
+        radial-gradient(900px 700px at 55% 85%, rgba(138,92,255,.12), transparent 60%),
+        var(--bg);
+      line-height:1.5;
+    }
+    a{color:inherit; text-decoration:none}
+    .wrap{max-width:var(--max); margin:0 auto; padding:28px 18px 80px}
+
+    /* Top nav */
+    .top{
+      position:sticky; top:0; z-index:99;
+      backdrop-filter: blur(14px);
+      background: rgba(11,13,18,.55);
+      border-bottom:1px solid var(--line);
+    }
+    .top-inner{
+      max-width:var(--max); margin:0 auto; padding:14px 18px;
+      display:flex; gap:14px; align-items:center; justify-content:space-between;
+    }
+    .brand{display:flex; gap:10px; align-items:center}
+    .dot{
+      width:12px; height:12px; border-radius:999px;
+      background: linear-gradient(135deg, var(--accent), var(--accent2));
+      box-shadow: 0 0 0 6px rgba(138,92,255,.12);
+    }
+    .brand strong{letter-spacing:.2px}
+    .nav{display:flex; gap:10px; flex-wrap:wrap; justify-content:flex-end}
+    .pill{
+      padding:8px 12px;
+      border-radius:999px;
+      background: rgba(255,255,255,.06);
+      border:1px solid rgba(255,255,255,.10);
+      font-size:14px;
+      color: var(--muted);
+    }
+    .pill:hover{background: rgba(255,255,255,.09); color: var(--text)}
+    @media (max-width: 900px){
+      .top-inner{gap:10px; align-items:flex-start; flex-direction:column}
+      .nav{justify-content:flex-start}
+    }
+
+    /* Hero */
+    .hero{padding:34px 0 18px}
+    .hero-grid{
+      display:grid;
+      grid-template-columns: 1.15fr .85fr;
+      gap:18px;
+      align-items:stretch;
+    }
+    @media (max-width: 900px){
+      .hero-grid{grid-template-columns:1fr;}
+    }
+    .card{
+      border-radius: var(--radius2);
+      background: linear-gradient(180deg, rgba(255,255,255,.08), rgba(255,255,255,.05));
+      border:1px solid rgba(255,255,255,.11);
+      box-shadow: var(--shadow);
+      overflow:hidden;
+    }
+    .hero-left{padding:26px}
+    .kicker{
+      display:inline-flex; gap:8px; align-items:center;
+      font-size:13px; color: var(--muted);
+      padding:6px 10px; border-radius:999px;
+      border:1px solid rgba(255,255,255,.12);
+      background: rgba(255,255,255,.04);
+      width:fit-content;
+    }
+    .kicker span{
+      width:8px; height:8px; border-radius:999px;
+      background: linear-gradient(135deg, var(--accent), var(--accent2));
+    }
+    h1{margin:14px 0 10px; font-size:44px; letter-spacing:-.6px; line-height:1.05}
+    @media (max-width: 520px){ h1{font-size:36px} }
+    .tagline{color: var(--muted); font-size:16px; max-width:58ch; margin:0 0 18px}
+    .cta-row{display:flex; gap:10px; flex-wrap:wrap; margin-top:16px}
+    .btn{
+      display:inline-flex; gap:10px; align-items:center; justify-content:center;
+      padding:11px 14px;
+      border-radius: 12px;
+      border:1px solid rgba(255,255,255,.14);
+      background: rgba(255,255,255,.06);
+      color: var(--text);
+      font-weight:600;
+      font-size:14px;
+    }
+    .btn.primary{
+      background: linear-gradient(135deg, rgba(138,92,255,.9), rgba(45,226,230,.55));
+      border:1px solid rgba(255,255,255,.18);
+    }
+    .meta{
+      display:flex; gap:12px; flex-wrap:wrap;
+      margin-top:18px;
+      padding-top:16px;
+      border-top:1px solid var(--line);
+      color: var(--muted);
+      font-size:13px;
+    }
+    .meta b{color: var(--text); font-weight:650}
+
+    .hero-right{display:flex; flex-direction:column}
+    .photo{
+      position:relative;
+      min-height: 360px;
+      background:
+        radial-gradient(600px 260px at 30% 10%, rgba(138,92,255,.22), transparent 60%),
+        radial-gradient(600px 260px at 80% 10%, rgba(45,226,230,.18), transparent 60%),
+        rgba(255,255,255,.04);
+    }
+    .photo img{
+      width:100%; height:100%; object-fit:cover; display:block;
+      filter: contrast(1.02) saturate(1.05);
+    }
+    .photo-overlay{
+      position:absolute; inset:auto 14px 14px 14px;
+      display:flex; gap:10px; flex-wrap:wrap;
+    }
+    .chip{
+      padding:8px 10px;
+      border-radius:999px;
+      background: rgba(0,0,0,.45);
+      border:1px solid rgba(255,255,255,.14);
+      color: rgba(255,255,255,.88);
+      font-size:13px;
+      backdrop-filter: blur(10px);
+    }
+
+    /* Sections */
+    .grid{
+      display:grid;
+      grid-template-columns: 1fr 1fr;
+      gap:18px;
+      margin-top:18px;
+    }
+    @media (max-width: 900px){ .grid{grid-template-columns:1fr} }
+    .section{padding:22px}
+    .section h2{margin:0 0 12px; font-size:18px; letter-spacing:-.2px}
+    .section p{margin:0 0 12px; color: var(--muted)}
+    .list{display:flex; flex-direction:column; gap:10px; margin-top:10px}
+    .item{
+      padding:12px 12px;
+      border-radius: 14px;
+      background: rgba(255,255,255,.05);
+      border:1px solid rgba(255,255,255,.10);
+      display:flex; align-items:flex-start; justify-content:space-between; gap:14px;
+    }
+    .item strong{font-size:14px}
+    .item span{color: var(--muted); font-size:13px}
+
+    /* Embeds */
+    .embed{
+      border-radius: 16px;
+      overflow:hidden;
+      border:1px solid rgba(255,255,255,.10);
+      background: rgba(255,255,255,.04);
+    }
+    iframe{width:100%; border:0}
+
+    code{
+      padding:2px 6px;
+      border-radius:10px;
+      background: rgba(255,255,255,.06);
+      border:1px solid rgba(255,255,255,.10);
+      color: rgba(255,255,255,.86);
+      font-size: 13px;
+    }
+
+    footer{
+      margin-top:22px;
+      padding:18px;
+      border-top:1px solid var(--line);
+      color: var(--muted);
+      display:flex;
+      justify-content:space-between;
+      gap:10px;
+      flex-wrap:wrap;
+      font-size:13px;
+    }
+    .muted{color: var(--muted)}
+    .divider{height:1px; background: var(--line); margin:18px 0}
+  </style>
+</head>
+
+<body>
+  <div class="top">
+    <div class="top-inner">
+      <div class="brand">
+        <div class="dot"></div>
+        <strong>JayJay</strong>
+        <span class="muted">EPK</span>
+      </div>
+
+      <div class="nav">
+        <a class="pill" href="#music">Music</a>
+        <a class="pill" href="#bio">Bio</a>
+        <a class="pill" href="#visuals">Visuals</a>
+        <a class="pill" href="#press">Press</a>
+        <a class="pill" href="#contact">Contact</a>
+      </div>
+    </div>
+  </div>
+
+  <div class="wrap">
+    <!-- HERO -->
+    <section class="hero">
+      <div class="hero-grid">
+        <div class="card hero-left">
+          <div class="kicker"><span></span> Official Electronic Press Kit</div>
+          <h1>JayJay</h1>
+          <p class="tagline">
+            JayJay isn’t here to make noise, he’s here to make change.
+          </p>
+
+          <div class="cta-row">
+            <a class="btn primary" href="#music">▶ Listen now</a>
+            <a class="btn" href="#contact">✉ Contact / Bookings</a>
+            <!-- Optional: upload later to /assets -->
+            <a class="btn" href="assets/JayJay-EPK.pdf" download>⬇ Download PDF</a>
+          </div>
+
+          <div class="meta">
+            <div><b>Genre:</b> UK Rap / Hip-Hop</div>
+            <div><b>Based:</b> UK</div>
+            <div><b>Status:</b> Independent</div>
+            <div><b>Press look:</b> Afro + Cornrows</div>
+          </div>
+        </div>
+
+        <div class="card hero-right">
+          <div class="photo">
+            <!-- Upload a press photo into /assets with this filename (or change it) -->
+            <img src="assets/jayjay-press-afro.jpg" alt="JayJay press photo (afro)" onerror="this.style.display='none';" />
+            <div class="photo-overlay">
+              <div class="chip">🎧 Music embedded</div>
+              <div class="chip">📍 UK</div>
+              <div class="chip">🏁 Independent</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- MUSIC + BIO -->
+    <section id="music" class="grid">
+      <div class="card section">
+        <h2>Music</h2>
+        <p>
+          Two featured tracks. Tap play, get the world, make the call.
+        </p>
+
+        <!-- Your Track 1 -->
+        <div class="embed" style="margin-top:12px;">
+          <iframe style="height:152px"
+            src="https://open.spotify.com/embed/track/0LnsUpHYQJRwVoC1Vc7OUg"
+            allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+            loading="lazy"></iframe>
+        </div>
+
+        <!-- Your Track 2 -->
+        <div class="embed" style="margin-top:12px;">
+          <iframe style="height:152px"
+            src="https://open.spotify.com/embed/track/7eGNIq1SrcVcflnCb2DdK6"
+            allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+            loading="lazy"></iframe>
+        </div>
+
+        <div class="divider"></div>
+
+        <!-- Replace these with YOUR artist pages if you want -->
+        <div class="cta-row">
+          <a class="btn" href="https://open.spotify.com/" target="_blank" rel="noopener">Spotify</a>
+          <a class="btn" href="https://music.apple.com/" target="_blank" rel="noopener">Apple Music</a>
+          <a class="btn" href="https://www.youtube.com/" target="_blank" rel="noopener">YouTube</a>
+          <a class="btn" href="https://www.instagram.com/" target="_blank" rel="noopener">Instagram</a>
+        </div>
+
+        <p class="muted" style="margin-top:10px;">
+          Want me to plug your real artist links in here? Send them and I’ll swap them cleanly.
+        </p>
+      </div>
+
+      <div class="card section" id="bio">
+        <h2>Short Bio</h2>
+        <p>
+          JayJay is a UK-based independent artist building a catalogue rooted in real life, purpose, and progression.
+          Blending grounded storytelling with energy you can actually replay, JayJay moves with intention: music that hits,
+          but also means something. The goal isn’t noise, it’s impact.
+        </p>
+
+        <div class="list">
+          <div class="item">
+            <div>
+              <strong>Featured</strong><br />
+              <span>2-track EPK selection (Spotify embeds above)</span>
+            </div>
+            <span>🎵</span>
+          </div>
+          <div class="item">
+            <div>
+              <strong>Visuals</strong><br />
+              <span>New visuals coming soon (press-ready site live now)</span>
+            </div>
+            <span>🎬</span>
+          </div>
+          <div class="item">
+            <div>
+              <strong>Press look</strong><br />
+              <span>Afro + Cornrows (two press options)</span>
+            </div>
+            <span>📸</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- VISUALS -->
+    <section id="visuals" class="grid">
+      <div class="card section">
+        <h2>Visuals</h2>
+        <p>
+          No YouTube link yet. That’s fine. This section is set up for when you drop your first official visual.
+        </p>
+
+        <div class="list">
+          <div class="item">
+            <div>
+              <strong>Featured visual</strong><br />
+              <span>Coming soon (YouTube embed will go here)</span>
+            </div>
+            <span>⏳</span>
+          </div>
+          <div class="item">
+            <div>
+              <strong>Short-form</strong><br />
+              <span>Instagram / TikTok clips can be linked here too</span>
+            </div>
+            <span>📱</span>
+          </div>
+        </div>
+
+        <p class="muted" style="margin-top:12px;">
+          When you’re ready, send the YouTube link and I’ll drop it in properly.
+        </p>
+      </div>
+
+      <div class="card section">
+        <h2>Photos / Assets</h2>
+        <p>
+          Upload your press photos into <code>/assets</code>. Because you want both looks, use two files:
+        </p>
+
+        <div class="list">
+          <a class="item" href="assets/jayjay-press-afro.jpg" target="_blank" rel="noopener">
+            <div>
+              <strong>Press photo (Afro)</strong><br />
+              <span>assets/jayjay-press-afro.jpg</span>
+            </div>
+            <span>🧑🏾‍🎤</span>
+          </a>
+          <a class="item" href="assets/jayjay-press-cornrows.jpg" target="_blank" rel="noopener">
+            <div>
+              <strong>Press photo (Cornrows)</strong><br />
+              <span>assets/jayjay-press-cornrows.jpg</span>
+            </div>
+            <span>🪢</span>
+          </a>
+          <a class="item" href="assets/logo.png" target="_blank" rel="noopener">
+            <div>
+              <strong>Logo (optional)</strong><br />
+              <span>assets/logo.png</span>
+            </div>
+            <span>🟪</span>
+          </a>
+        </div>
+
+        <p class="muted" style="margin-top:12px;">
+          If you upload the photos with different filenames, just tell me the names and I’ll update the links.
+        </p>
+      </div>
+    </section>
+
+    <!-- PRESS -->
+    <section id="press" class="grid">
+      <div class="card section">
+        <h2>Press / Quotes</h2>
+        <p>
+          If you’ve got quotes, paste them in. If not, we’ll keep this clean and “press-ready”.
+        </p>
+
+        <div class="list">
+          <div class="item">
+            <div>
+              <strong>Press note</strong><br />
+              <span>For interviews, assets, and bookings, contact below.</span>
+            </div>
+            <span>📰</span>
+          </div>
+          <div class="item">
+            <div>
+              <strong>Positioning</strong><br />
+              <span>Purpose-first UK rap with replay value and real-life writing.</span>
+            </div>
+            <span>🎯</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="card section">
+        <h2>Quick Facts</h2>
+        <div class="list">
+          <div class="item">
+            <div>
+              <strong>Best 3 tags</strong><br />
+              <span>Storytelling • Purpose • Momentum</span>
+            </div>
+            <span>🏷️</span>
+          </div>
+          <div class="item">
+            <div>
+              <strong>Availability</strong><br />
+              <span>Shows • Features • Press</span>
+            </div>
+            <span>📌</span>
+          </div>
+          <div class="item">
+            <div>
+              <strong>Contact</strong><br />
+              <span>jayjayinfomusic@gmail.com</span>
+            </div>
+            <span>✉</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section id="contact" class="grid">
+      <div class="card section">
+        <h2>Contact / Bookings</h2>
+        <p>Keep it direct. One email. One click. Done.</p>
+
+        <div class="list">
+          <div class="item">
+            <div>
+              <strong>Email</strong><br />
+              <span><a href="mailto:jayjayinfomusic@gmail.com?subject=Booking%20/%20Press%20-%20JayJay">jayjayinfomusic@gmail.com</a></span>
+            </div>
+            <span>✉</span>
+          </div>
+          <div class="item">
+            <div>
+              <strong>Management (optional)</strong><br />
+              <span>Add name + email when ready</span>
+            </div>
+            <span>📞</span>
+          </div>
+        </div>
+
+        <div class="cta-row" style="margin-top:12px;">
+          <a class="btn primary" href="mailto:jayjayinfomusic@gmail.com?subject=Booking%20/%20Press%20-%20JayJay">Send email</a>
+        </div>
+      </div>
+
+      <div class="card section">
+        <h2>Downloads</h2>
+        <p>
+          Optional but pro: upload a PDF EPK and a zip of press photos into <code>/assets</code>.
+        </p>
+        <div class="list">
+          <a class="item" href="assets/JayJay-EPK.pdf" download>
+            <div>
+              <strong>Download EPK (PDF)</strong><br />
+              <span>assets/JayJay-EPK.pdf</span>
+            </div>
+            <span>⬇</span>
+          </a>
+          <a class="item" href="assets/JayJay-Press-Pack.zip" download>
+            <div>
+              <strong>Download Press Pack (ZIP)</strong><br />
+              <span>assets/JayJay-Press-Pack.zip</span>
+            </div>
+            <span>🗂️</span>
+          </a>
+        </div>
+
+        <p class="muted" style="margin-top:12px;">
+          Don’t have these yet? Leave them. The EPK still works perfectly without downloads.
+        </p>
+      </div>
+    </section>
+
+    <footer>
+      <div>© <span id="y"></span> JayJay • Official EPK</div>
+      <div class="muted">Hosted on GitHub Pages • Updated: <span id="d"></span></div>
+    </footer>
+  </div>
+
+  <script>
+    const now = new Date();
+    document.getElementById("y").textContent = now.getFullYear();
+    document.getElementById("d").textContent = now.toLocaleDateString(undefined, { year:"numeric", month:"short", day:"2-digit" });
+  </script>
+</body>
+</html>
